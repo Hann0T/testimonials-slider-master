@@ -29,28 +29,11 @@ function nextSlider() {
 	drawNewScene(currentScene)
 }
 
-console.log(currentScene)
-console.log(SCENES)
-
-
-function drawNewScene2(currentScene) {
-
-	SCENES.forEach(scene => {
-		if (scene.classList[2]) {
-			console.log('nadaparahacer')
-		} else {
-			scene.classList.remove('isActive')
-			scene.classList.add('isNoActive')
-		}
-	})
-
-	currentScene.classList.remove('isNoActive')
-	currentScene.classList.add('isActive')
-}
-
 function drawNewScene(currentScene) {
 	SCENES.forEach(scene => {
+
 		scene.forEach(thing => {
+
 			if (thing.classList[2] === 'isNoActive') {
 				thing.classList.remove('isNoActive')
 				thing.classList.add('isActive')
@@ -58,7 +41,9 @@ function drawNewScene(currentScene) {
 				thing.classList.remove('isActive')
 				thing.classList.add('isNoActive')
 			}
+
 		})
+
 	})
 }
 
